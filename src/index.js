@@ -2,12 +2,19 @@
 
 import './styles.css';
 import { appendHomepage } from './homepage.js';
+import { appendMenu } from './menu.js';
 
-appendHomepage();
-
+const content = document.querySelector('#content');
 const nav = document.querySelector('nav');
+
+appendHomepage(content);
 
 nav.addEventListener('click', (e) => {
   if (e.target.tagName !== 'BUTTON') return;
-  if (e.target.textContent === 'Home') appendHomepage();
+
+  // Clear content
+  content.textContent = '';
+
+  if (e.target.textContent === 'Home') appendHomepage(content);
+  else if (e.target.textContent === 'Menu') appendMenu(content);
 });

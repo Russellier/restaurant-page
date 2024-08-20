@@ -1,7 +1,6 @@
 import potionShelf from './assets/images/bright-cropped-elena-mozhvilo-J2_nIEkIpRM-unsplash.jpg';
 
-export function appendHomepage() {
-  const content = document.querySelector('#content');
+export function appendHomepage(content) {
   const tagline = document.createElement('p');
   const description = document.createElement('p');
   const mainImg = document.createElement('img');
@@ -16,9 +15,6 @@ export function appendHomepage() {
   mainImg.classList.add('main-img');
 
   action.textContent = 'Order now or visit us!';
-
-  // Clear div
-  content.textContent = '';
 
   content.append(tagline, description, mainImg, action);
 }

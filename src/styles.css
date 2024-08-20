@@ -1,3 +1,10 @@
+* {
+  color: white;
+}
+
 body {
+  background-image: url('./assets/images/tom-kulczycki-N2fRlew1J6U-unsplash.jpg');
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
   background-color: darkslategray;
 }

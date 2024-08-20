@@ -1,6 +1,6 @@
 'use strict';
 
 import './styles.css';
-import { test } from './test.js';
+import { appendHomepage } from './homepage.js';
 
-console.log(test);
+appendHomepage();

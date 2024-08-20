@@ -9,6 +9,10 @@ body {
   background-color: rgb(73, 0, 73);
 }
 
+button {
+  color: black;
+}
+
 .main-img {
   height: 15rem;
   border-radius: 50%;

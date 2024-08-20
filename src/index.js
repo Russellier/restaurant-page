@@ -6,6 +6,9 @@ import { appendMenu } from './menu.js';
 
 const content = document.querySelector('#content');
 const nav = document.querySelector('nav');
+let tab = 'home';
+
+content.className = tab;
 
 appendHomepage(content);
 
@@ -15,6 +18,9 @@ nav.addEventListener('click', (e) => {
   // Clear content
   content.textContent = '';
 
-  if (e.target.textContent === 'Home') appendHomepage(content);
-  else if (e.target.textContent === 'Menu') appendMenu(content);
+  tab = e.target.textContent.toLowerCase();
+  content.className = tab;
+
+  if (tab === 'home') appendHomepage(content);
+  else if (tab === 'menu') appendMenu(content);
 });

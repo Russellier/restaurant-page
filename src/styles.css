@@ -45,9 +45,10 @@ h6 {
 }
 
 :root {
-  --bg-wht: rgba(255, 255, 255, 0.15);
+  --bg-wht1: rgba(255, 255, 255, 0.2);
+  --bg-wht2: rgba(255, 255, 255, 0.1);
   --bg-blk1: rgba(0, 0, 0, 0.8);
-  --bg-blk2: rgba(0, 0, 0, 0.6);
+  --bg-blk2: rgba(0, 0, 0, 0.5);
 }
 
 @font-face {
@@ -66,7 +67,7 @@ h6 {
 }
 
 body {
-  background-image: url('./assets/images/edited-tom-kulczycki-N2fRlew1J6U-unsplash.jpg');
+  background-image: url('./assets/images/bnw-tom-kulczycki-N2fRlew1J6U-unsplash.jpg');
   background-repeat: no-repeat, repeat;
   background-size: cover;
   background-color: rgb(73, 0, 73);
@@ -77,6 +78,7 @@ header {
   flex-direction: column;
   align-items: center;
   background-color: var(--bg-blk1);
+  /* background-color: var(--bg-wht1); */
 }
 
 header > p {
@@ -104,16 +106,21 @@ button:hover {
   transform: translateY(-0.35rem);
 }
 
+#content {
+  background-color: var(--bg-blk2);
+  /* background-color: var(--bg-wht2); */
+  width: 80vw;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .home {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.8rem;
-  width: 50vw;
-  margin: auto;
-  margin-top: 2rem;
   padding: 2rem;
-  background-color: var(--bg-blk2);
   font-size: 1.3rem;
 }
 
@@ -125,4 +132,45 @@ button:hover {
   height: 20rem;
   border-radius: 50%;
   border: 5px solid rgb(84, 0, 84);
+}
+
+.menu > ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.menu > ul > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem;
+  background-color: var(--bg-blk2);
+}
+
+.menu > ul > li:hover {
+  cursor: pointer;
+  background-color: var(--bg-wht2);
+}
+
+.menu > ul > li > :first-child {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.menu > ul > li > img {
+  width: 5rem;
+  height: auto;
+}
+
+.menu > ul > li > :last-child {
+  align-self: start;
+  font-size: 1rem;
+}
+
+.menu > p {
+  padding: 0 2rem 2rem;
 }

@@ -17,6 +17,8 @@ export function appendHomepage() {
 
   action.textContent = 'Order now or visit us!';
 
+  // Clear div
+  content.textContent = '';
+
   content.append(tagline, description, mainImg, action);
-  console.log(content);
 }

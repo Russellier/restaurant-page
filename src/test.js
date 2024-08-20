@@ -1,1 +1,1 @@
-export const test = 'Javascript is working.';
+export const test = 'Is server working?';

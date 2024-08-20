@@ -174,3 +174,25 @@ button:hover {
 .menu > p {
   padding: 0 2rem 2rem;
 }
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.contact > div {
+  display: flex;
+  gap: 2rem;
+  font-size: 2rem;
+}
+
+.contact img {
+  height: 3rem;
+}
+
+.contact > .map {
+  align-self: fill;
+  height: auto;
+}

@@ -68,5 +68,4 @@ export function appendMenu(content) {
   credit.textContent = 'Icons from icons8.com';
 
   content.append(menuList, credit);
-  console.log('This is the menu page');
 }

@@ -1,4 +1,4 @@
-import potionShelf from './assets/images/bright-cropped-elena-mozhvilo-J2_nIEkIpRM-unsplash.jpg';
+import potionShelf from './assets/images/home/bright-cropped-elena-mozhvilo-J2_nIEkIpRM-unsplash.jpg';
 
 export function appendHomepage(content) {
   const tagline = document.createElement('p');

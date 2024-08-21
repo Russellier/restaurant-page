@@ -197,3 +197,37 @@ button:hover {
   align-self: fill;
   height: auto;
 }
+
+@media only screen and (max-width: 600px) {
+  header > p {
+    font-size: 3.5rem;
+  }
+
+  #content {
+    margin-bottom: 2rem;
+  }
+
+  .home > .main-img {
+    height: 15rem;
+  }
+
+  .menu > ul {
+    grid-template-columns: 1fr;
+  }
+
+  .contact > div {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .menu > ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .menu > ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

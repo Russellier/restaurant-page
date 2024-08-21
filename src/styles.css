@@ -90,21 +90,26 @@ header > p {
 
 header > nav {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   padding-bottom: 1rem;
 }
 
-button {
+header > nav > button {
   background: transparent;
   border: none;
+  padding: 0 1rem;
   font-size: 1.5rem;
   transition: 400ms;
 }
 
-button:hover {
+header > nav > button:hover {
   cursor: pointer;
   transform: scale(1.05);
   transform: translateY(-0.35rem);
+}
+
+header > nav > button.active-tab {
+  border-bottom: 3px solid white;
 }
 
 #content {

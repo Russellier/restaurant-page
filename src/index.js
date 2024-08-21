@@ -6,23 +6,35 @@ import { appendMenu } from './menu.js';
 import { appendContact } from './contact.js';
 
 const content = document.querySelector('#content');
-const nav = document.querySelector('nav');
+const navBtns = document.querySelectorAll('nav > button');
 let tab = 'home';
 
 content.className = tab;
 
+// Initialize home page
 appendHomepage(content);
+navBtns[0].classList.add('active-tab');
 
-nav.addEventListener('click', (e) => {
-  if (e.target.tagName !== 'BUTTON') return;
+function makeInactive() {
+  navBtns.forEach((button) => {
+    button.classList.remove('active-tab');
+  });
+}
 
-  // Clear content
-  content.textContent = '';
+navBtns.forEach((button) => {
+  button.addEventListener('click', (e) => {
+    // Clear content
+    content.textContent = '';
 
-  tab = e.target.textContent.toLowerCase();
-  content.className = tab;
+    makeInactive();
 
-  if (tab === 'home') appendHomepage(content);
-  else if (tab === 'menu') appendMenu(content);
-  else if (tab === 'contact') appendContact(content);
+    tab = e.target.textContent.toLowerCase();
+    content.className = tab;
+
+    e.target.classList.add('active-tab');
+
+    if (tab === 'home') appendHomepage(content);
+    else if (tab === 'menu') appendMenu(content);
+    else if (tab === 'contact') appendContact(content);
+  });
 });
